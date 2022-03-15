@@ -1,0 +1,10 @@
+node_modules
+Dockerfile
+.vscode
+dist
+.editorconfig
+# *.env
+.env.example
+.gitignore
+.github
+README.md
