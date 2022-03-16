@@ -16,8 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Heroku Login Registry
-        run: docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
-        # run: sudo heroku container:login
+        # run: docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
+        run: sudo heroku container:login
       - name: Build Docker Image
         run: docker build -t ${{ env.IMAGE_NAME }} .
       - name: Push Docker Image
