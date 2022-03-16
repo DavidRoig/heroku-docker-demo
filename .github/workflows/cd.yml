@@ -15,7 +15,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Heroku Login v2
+      - name: Heroku Login
+        run: heroku auth:login
+      - name: Heroku Login Registry
         run: heroku container:login
       - name: Build Docker Image
         run: docker build -t ${{ env.IMAGE_NAME }} .
