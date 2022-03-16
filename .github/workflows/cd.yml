@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Heroku Login
+      - name: Heroku Login R
         run: heroku container:login
         # run: docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
         # run: docker login --username=_ --password=${{ secrets.HEROKU_API_KEY }} registry.heroku.com
