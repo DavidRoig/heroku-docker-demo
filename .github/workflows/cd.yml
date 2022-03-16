@@ -18,7 +18,7 @@ jobs:
       - name: Heroku Login Registry
         # run: docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
         # run: heroku container:login
-        run: docker login --username=davidroig --password=${{ secrets.HEROKU_API_KEY }} registry.heroku.com
+        run: docker login --username=_ --password=${{ secrets.HEROKU_API_KEY }} registry.heroku.com
       - name: Build Docker Image
         run: docker build -t ${{ env.IMAGE_NAME }} .
       - name: Push Docker Image
