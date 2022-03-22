@@ -9,5 +9,5 @@ app.use('/', express.static(staticFilesPath));
 
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
-  console.log(`App running on http://localhost:${PORT}`);
+  console.log(`App running on: http://localhost:${PORT}`);
 });
